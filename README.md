@@ -31,6 +31,8 @@ If you need update all dependencies or packages use.
 flutter pub upgrade
 ````
 
+Google Drive for apk:
+https://drive.google.com/drive/folders/11eUsQrUwt_b3NOoZLxcszfm570RCxwR_?usp=share_link
 
 
 
