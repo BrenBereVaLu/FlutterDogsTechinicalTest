@@ -3,6 +3,7 @@ import 'dart:convert';
 import '../../../domain/either/either.dart';
 import '../../../domain/failure/http_request/http_request_failure.dart';
 import '../../../domain/models/dogs/allDogs.dart';
+import '../../../domain/typedefs.dart';
 import '../../http/http.dart';
 import '../local/database/dogs_database.dart';
 import '../utils/handle_failure.dart';
@@ -16,7 +17,7 @@ class DogsApi {
     final result =
         await _http.request('1151549092634943488', onSuccess: (json) {
       // Si json es un String, parsearlo a List<Map<String, dynamic>>
-      final list = List<Map<String, dynamic>>.from(jsonDecode(json));
+      final list = List<Json>.from(jsonDecode(json));
       final dogs = list.map((e) => Alldogs.fromJson(e)).toList();
 
       // Guardar en SQLite

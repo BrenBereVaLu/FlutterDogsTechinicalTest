@@ -4,7 +4,8 @@ import '../../typedefs.dart';
 
 part 'allDogs.freezed.dart';
 part 'allDogs.g.dart';
-
+// freezed +  json_serializable =, 
+//modelos que se serialicen y deserialicen de JSON automáticamente
 @freezed
 class Alldogs with _$Alldogs {
   factory Alldogs({

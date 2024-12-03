@@ -14,9 +14,13 @@ import 'app/my_app.dart';
 
 void main() {
   WidgetsFlutterBinding
-      .ensureInitialized(); // Esto asegura la inicialización correcta
+      .ensureInitialized(); // Esto asegura la inicialización de servicios de framework de manera 
+      //correcta la bases de datos
   runApp(MultiProvider(
-    providers: [
+    //Gestiona dependencias y estado que inyecta multiples proveedores que sera disponibles en la jeraquia de los
+    //widgets
+    providers: [ 
+      //inyeccion de instancia para que los widgets accedan al repositorio cuando sea necesario
       Provider<DogsRepository>(
           create: (_) => DogsRepositoryImpl(DogsApi(Http(
               client: http.Client(), baseUrl: 'https://jsonblob.com/api/')))),

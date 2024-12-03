@@ -4,6 +4,8 @@ import 'package:http/http.dart';
 
 import '../../domain/either/either.dart';
 
+//Maneja solicitudes de manera generica utilizando el paquete de http de dart con el patron de Either para respuestas
+//exitosas o incorrectas
 class Http {
   Http({required Client client, required String baseUrl})
       : _client = client,

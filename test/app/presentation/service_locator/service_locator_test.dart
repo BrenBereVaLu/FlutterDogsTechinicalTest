@@ -1,11 +1,15 @@
 import 'package:flutter_dogs/app/presentation/service_locator/service_locator.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+//prueba unitaria = verifica un comportamiento de una clase o mecanismo
 void main() {
+  //Se ejecuta despues de cada prueba o conjunto de pruebas
   tearDown(() {
+    //Limpiar por si hay ninguna dependencia o dato registrado
     ServiceLocator.instance.clear();
   });
   test('ServiceLocator > put', () {
+    //Si busca un string antes de registrarlo arroja un throwsAssertionError
     expect(
       () {
         ServiceLocator.instance.find<String>();
